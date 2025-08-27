@@ -1,12 +1,40 @@
-# React + Vite
+Portfólio Pessoal - Pedro Henrique Frasca Magalhães
+Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos e informações de contato de forma moderna e responsiva. O projeto foi construído com React e Vite, utilizando Tailwind CSS para a estilização.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Funcionalidades Principais
+Design Responsivo: Interface adaptável para uma ótima experiência em desktops, tablets e celulares.
 
-Currently, two official plugins are available:
+Componentes Reutilizáveis: Estrutura organizada com componentes para cada seção, como Barra de Navegação, Habilidades e Projetos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Carrossel de Habilidades: Seção de tecnologias apresentada em um carrossel contínuo e animado, utilizando a biblioteca Swiper.js.
 
-## Expanding the ESLint configuration
+Seção de Projetos: Exibição detalhada dos projetos, incluindo descrição, tecnologias utilizadas, e links para o código no GitHub e para a demonstração ao vivo.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Estilização Moderna: Construído com Tailwind CSS para uma estilização rápida e consistente.
+
+🛠️ Tecnologias Utilizadas
+Este projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
+
+Frontend:
+
+React
+
+Vite
+
+Tailwind CSS
+
+Swiper.js
+
+Lucide React (para ícones)
+
+Qualidade de Código:
+
+ESLint
+
+🚀 Como Rodar o Projeto Localmente
+Para executar este projeto em sua máquina local, siga os passos abaixo.
+
+Pré-requisitos
+Node.js (versão 14 ou superior)
+
+npm ou Yarn
