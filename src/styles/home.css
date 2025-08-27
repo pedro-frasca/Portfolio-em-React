@@ -1,0 +1,108 @@
+/* --- Estilos Globais e Reset --- */
+/* O seletor * (asterisco) seleciona TODOS os elementos da página. */
+* {
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho final do elemento. */
+  margin: 0; /* Remove todas as margens padrão dos elementos. */
+  padding: 0; /* Remove todos os paddings (espaçamento interno) padrão. */
+}
+
+/* Estilizando o corpo (body) da página. */
+body {
+  /* Define uma lista de fontes. O navegador tentará usar a primeira, se não encontrar,
+     passará para a próxima, e assim por diante. É uma prática comum para garantir
+     compatibilidade entre diferentes sistemas operacionais. */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  
+  /* Melhora a renderização das fontes, deixando-as mais suaves. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #0a192f; /* Define a cor de fundo da página para um azul bem escuro. */
+  color: #ccd6f6; /* Define a cor padrão do texto para um tom de branco azulado. */
+}
+
+/* Esta é uma classe "utilitária". Podemos usá-la em vários lugares (como na navbar e no hero)
+   para centralizar o conteúdo e garantir que ele não fique largo demais em telas grandes. */
+.container {
+  width: 90%; /* O container ocupará 90% da largura da tela. */
+  max-width: 1100px; /* Mas ele nunca passará de 1100 pixels de largura. */
+  margin: 0 auto; /* Um truque para centralizar o container horizontalmente. */
+}
+
+/* Estilos para todos os links (tags <a>). */
+a {
+  text-decoration: none; /* Remove o sublinhado padrão dos links. */
+  color: inherit; /* Faz o link herdar a cor do seu elemento pai. */
+  transition: color 0.3s ease; /* Cria uma animação suave de 0.3s quando a cor do link muda. */
+}
+
+/* --- Seção Principal (Hero) --- */
+.hero {
+  /* Define uma altura mínima. `calc(100vh - 80px)` significa: 100% da altura da tela (vh)
+     menos 80 pixels (uma altura aproximada da navbar). Isso faz a seção ocupar
+     quase a tela inteira. */
+  min-height: calc(100vh - 80px);
+  display: flex; /* Permite usar alinhamento. */
+  align-items: center; /* Centraliza o conteúdo verticalmente. */
+  padding: 2rem 0; /* Espaçamento interno. */
+}
+
+.hero-content {
+  max-width: 700px; /* Limita a largura do texto para melhor legibilidade. */
+  text-align: left; /* Alinha o texto à esquerda. */
+}
+
+.hero-content h2 {
+  /* `clamp` é uma função de CSS moderna para fontes responsivas.
+     Tamanho mínimo: 2.5rem. Tamanho preferido: 5% da largura da tela (vw).
+     Tamanho máximo: 4rem. O navegador escolhe o melhor valor entre esses limites. */
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800; /* Fonte bem grossa. */
+  line-height: 1.1; /* Altura da linha, para o texto não ficar muito espaçado. */
+  color: #e6f1ff; /* Um branco um pouco mais brilhante para o título. */
+}
+
+.hero-content .highlight {
+  color: #ffd829; /* Cor de destaque para o nome. */
+}
+
+.hero-content p {
+  margin-top: 1.5rem; /* Espaço acima do parágrafo. */
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #8892b0; /* Cor de texto secundária (cinza azulado). */
+}
+
+.cta-button {
+  display: inline-block; /* Necessário para aplicar padding e margin corretamente. */
+  margin-top: 2.5rem; /* Espaço acima do botão. */
+  padding: 0.75rem 1.5rem; /* Espaçamento interno do botão. */
+  border: 1px solid #64ffda; /* Borda na cor de destaque. */
+  border-radius: 4px; /* Bordas levemente arredondadas. */
+  color: #64ffda;
+  font-weight: bold;
+  background-color: transparent; /* Fundo transparente. */
+  /* Animação suave para a mudança de cor de fundo. */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  /* Quando o mouse passa por cima, o fundo ganha uma leve cor de destaque. */
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* --- Responsividade para Telas Pequenas --- */
+/* `@media (max-width: 768px)` aplica os estilos seguintes APENAS quando a
+   largura da tela for 768 pixels ou menos (celulares e tablets). */
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center; /* Centraliza o texto principal em telas pequenas. */
+  }
+
+  .navbar .container {
+    flex-direction: column; /* Coloca o logo e os links um em cima do outro. */
+    gap: 1rem; /* Adiciona um espaço entre eles. */
+  }
+}

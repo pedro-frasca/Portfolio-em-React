@@ -1,0 +1,35 @@
+/* --- Barra de Navegação (Navbar) --- */
+/* Seleciona o elemento com a classe "navbar". */
+.navbar {
+  /* A cor de fundo tem um pouco de transparência (o '0.85' no final). */
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px); /* Cria um efeito de vidro fosco, desfocando o que está atrás. */
+  padding: 1rem 0; /* Adiciona espaçamento interno: 1rem em cima/baixo, 0 nas laterais. */
+  position: sticky; /* Faz a navbar "grudar" no topo da tela quando o usuário rola a página. */
+  top: 0; /* Define que ela deve grudar no topo (posição 0). */
+  z-index: 100; /* Garante que a navbar fique na frente de outros elementos. */
+  border-bottom: 1px solid #132d57; /* Adiciona uma linha sutil na parte de baixo. */
+}
+
+/* Seleciona o .container que está DENTRO do .navbar. */
+.navbar .container {
+  display: flex; /* Coloca os filhos diretos (o logo e a nav) um ao lado do outro. */
+  justify-content: space-between; /* Empurra o logo para um lado e a nav para o outro. */
+  align-items: center; /* Alinha os itens verticalmente no centro. */
+}
+
+.logo a {
+  font-size: 1.5rem; /* Tamanho da fonte. */
+  font-weight: bold; /* Deixa a fonte em negrito. */
+  color: #ffd829; /* Cor de destaque (ciano). */
+}
+
+.nav-links {
+  list-style: none; /* Remove as bolinhas da lista. */
+  display: flex; /* Coloca os itens da lista (os links) um ao lado do outro. */
+  gap: 1.5rem; /* Cria um espaço de 1.5rem entre cada item da lista. */
+}
+
+.nav-links a:hover {
+  color: #ffd829; /* Muda a cor do link para ciano quando o mouse passa por cima. */
+}

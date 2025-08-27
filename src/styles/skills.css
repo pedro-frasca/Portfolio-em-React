@@ -1,0 +1,37 @@
+.skills-section {
+  padding: 4rem 0; /* Espaçamento interno generoso em cima e embaixo. */
+  background-color: #0b1f3b; /* Um azul um pouco diferente para variar do fundo. */
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem; /* Espaço abaixo do título. */
+  color: #e6f1ff;
+}
+
+/* Usamos CSS Grid para criar um grid de cards que se adapta ao tamanho da tela. */
+.skills-grid {
+  display: grid;
+  /* Cria colunas que se ajustam: o mínimo é 150px, o máximo é 1 fração do espaço. */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem; /* Espaço entre os cards. */
+}
+
+.skill-card {
+  background-color: #132f57; /* Fundo do card. */
+  border: 1px solid #2a4c7a;
+  border-radius: 8px; /* Bordas arredondadas. */
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: #ccd6f6;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Efeito de "levantar" o card ao passar o mouse. */
+  background-color: #1a3a66;
+  border-color: #ffd829;
+  color: #ffd829;
+}

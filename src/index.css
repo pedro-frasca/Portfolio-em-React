@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Adicione esta regra para garantir a animação contínua da Swiper */
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
